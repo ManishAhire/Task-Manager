@@ -8,6 +8,7 @@
 import Foundation
 
 class TaskManager: ObservableObject {
+    
     @Published var tasks: [Task] = []
     
     private let tasksKey = "SavedTasks"

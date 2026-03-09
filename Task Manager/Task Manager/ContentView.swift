@@ -49,6 +49,8 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct SwiftUIView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
