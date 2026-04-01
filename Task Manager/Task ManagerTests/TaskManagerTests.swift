@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 import XCTest
 @testable import Task_Manager
 
@@ -15,6 +16,13 @@ final class TaskManagerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        
+        // Clear UserDefaults before each test
+        let defaults = UserDefaults.standard
+        if let bundleID = Bundle.main.bundleIdentifier {
+            defaults.removePersistentDomain(forName: bundleID)
+        }
+        
         sut = TaskManager()
     }
     

@@ -17,4 +17,4 @@ struct Task: Identifiable, Codable {
         self.title = title
         self.isCompleted = isCompleted
     }
-}
+} 
