@@ -10,23 +10,19 @@ jobs:
   test:
     runs-on: macos-latest
     
+    defaults:
+        run:
+            working-directory: Task Manager
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
-      working-directory: Task Manager
       with:
         ruby-version: 3.2
         bundler-cache: true
-      
-        
-#    - name: Install Dependencies
-#      run: bundle install
-#      working-directory: Task Manager
-        
     
     - name: Run Tests
       run: bundle exec fastlane ios unit_tests
-      working-directory: Task Manager
