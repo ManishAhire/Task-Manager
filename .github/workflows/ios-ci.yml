@@ -22,16 +22,6 @@ jobs:
       with:
         ruby-version: 3.2
         bundler-cache: true
-        
-     - name: Cache Xcode Build
-      uses: actions/cache@v4
-      with:
-        path: |
-          ~/Library/Developer/Xcode/DerivedData
-          ~/Library/Caches/com.apple.dt.Xcode
-        key: ${{ runner.os }}-xcode-${{ hashFiles('**/Podfile.lock', '**/Package.resolved') }}
-        restore-keys: |
-          ${{ runner.os }}-xcode-
     
     - name: Run Tests
       run: bundle exec fastlane ios unit_tests
