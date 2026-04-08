@@ -22,4 +22,4 @@ jobs:
     
     - name: Run Tests
       run: bundle exec fastlane ios unit_tests
-      working-directory: ./Task\ Manager
+      working-directory: .
