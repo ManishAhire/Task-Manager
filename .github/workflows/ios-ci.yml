@@ -19,6 +19,10 @@ jobs:
       with:
         ruby-version: 3.2
         bundler-cache: true
+        
+    - name: Install Dependencies
+        run: bundle install
+        
     
     - name: Run Tests
       run: bundle exec fastlane ios unit_tests
