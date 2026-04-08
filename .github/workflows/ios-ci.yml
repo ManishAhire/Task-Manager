@@ -10,9 +10,9 @@ jobs:
   test:
     runs-on: macos-latest
     
-    defaults:
-       run:
-         working-directory: Task Manager
+#    defaults:
+#       run:
+#         working-directory: Task Manager
     
     steps:
     - name: Checkout code
