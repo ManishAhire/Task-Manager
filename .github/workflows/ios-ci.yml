@@ -21,4 +21,3 @@ jobs:
     
     - name: Run Tests
       run: bundle exec fastlane ios unit_tests
-EOF
