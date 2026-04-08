@@ -16,10 +16,11 @@ jobs:
       
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
+      working-directory: Task Manager
       with:
         ruby-version: 3.2
         bundler-cache: true
-      working-directory: Task Manager
+      
         
 #    - name: Install Dependencies
 #      run: bundle install
